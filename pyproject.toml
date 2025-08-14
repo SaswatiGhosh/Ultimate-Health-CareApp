@@ -1,0 +1,15 @@
+[project]
+name="backend"
+version = "0.0.1"
+description = "An MLOps project for HealthCare app"
+authors = [{ name = "Saswati Ghosh " , email= "saswatighosh9999@gmail.com"}]
+
+[tool.setuptools]
+packages={find= {}}
+
+
+[tool.setuptools.dynamic]
+dependencies={file ="requirements.txt"}
+
+
+

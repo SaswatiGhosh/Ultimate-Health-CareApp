@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: backend
+Version: 0.0.1
+Summary: An MLOps project for HealthCare app
+Author: Saswati Ghosh
+Author-email: Saswati Ghosh  <saswatighosh9999@gmail.com>
+License-File: LICENSE
+License-File: LICENSE copy
+Dynamic: author
+Dynamic: license-file
