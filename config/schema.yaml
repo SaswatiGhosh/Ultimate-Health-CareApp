@@ -1,0 +1,510 @@
+columns:
+  - diseases: int
+  - anxiety and nervousness: int
+  - depression: int
+  - shortness of breath: int
+  - depressive or psychotic symptoms: int
+  - sharp chest pain: int
+  - dizziness: int
+  - insomnia: int
+  - abnormal involuntary movements: int
+  - chest tightness: int
+  - palpitations: int
+  - irregular heartbeat: int
+  - breathing fast: int
+  - hoarse voice: int
+  - sore throat: int
+  - difficulty speaking: int
+  - cough: int
+  - nasal congestion: int
+  - throat swelling: int
+  - diminished hearing: int
+  - lump in throat: int
+  - throat feels tight: int
+  - difficulty in swallowing: int
+  - skin swelling: int
+  - retention of urine: int
+  - groin mass: int
+  - leg pain: int
+  - hip pain: int
+  - suprapubic pain: int
+  - blood in stool: int
+  - lack of growth: int
+  - emotional symptoms: int
+  - elbow weakness: int
+  - back weakness: int
+  - pus in sputum: int
+  - symptoms of the scrotum and testes: int
+  - swelling of scrotum: int
+  - pain in testicles: int
+  - flatulence: int
+  - pus draining from ear: int
+  - jaundice: int
+  - mass in scrotum: int
+  - white discharge from eye: int
+  - irritable infant: int
+  - abusing alcohol: int
+  - fainting: int
+  - hostile behavior: int
+  - drug abuse: int
+  - sharp abdominal pain: int
+  - feeling ill: int
+  - vomiting: int
+  - headache: int
+  - nausea: int
+  - diarrhea: int
+  - vaginal itching: int
+  - vaginal dryness: int
+  - painful urination: int
+  - involuntary urination: int
+  - pain during intercourse: int
+  - frequent urination: int
+  - lower abdominal pain: int
+  - vaginal discharge: int
+  - blood in urine: int
+  - hot flashes: int
+  - intermenstrual bleeding: int
+  - hand or finger pain: int
+  - wrist pain: int
+  - hand or finger swelling: int
+  - arm pain: int
+  - wrist swelling: int
+  - arm stiffness or tightness: int
+  - arm swelling: int
+  - hand or finger stiffness or tightness: int
+  - wrist stiffness or tightness: int
+  - lip swelling: int
+  - toothache: int
+  - abnormal appearing skin: int
+  - skin lesion: int
+  - acne or pimples: int
+  - dry lips: int
+  - facial pain: int
+  - mouth ulcer: int
+  - skin growth: int
+  - eye deviation: int
+  - diminished vision: int
+  - double vision: int
+  - cross-eyed: int
+  - symptoms of eye: int
+  - pain in eye: int
+  - eye moves abnormally: int
+  - abnormal movement of eyelid: int
+  - foreign body sensation in eye: int
+  - irregular appearing scalp: int
+  - swollen lymph nodes: int
+  - back pain: int
+  - neck pain: int
+  - low back pain: int
+  - pain of the anus: int
+  - pain during pregnancy: int
+  - pelvic pain: int
+  - impotence: int
+  - infant spitting up: int
+  - vomiting blood: int
+  - regurgitation: int
+  - burning abdominal pain: int
+  - restlessness: int
+  - symptoms of infants: int
+  - wheezing: int
+  - peripheral edema: int
+  - neck mass: int
+  - ear pain: int
+  - jaw swelling: int
+  - mouth dryness: int
+  - neck swelling: int
+  - knee pain: int
+  - foot or toe pain: int
+  - bowlegged or knock-kneed: int
+  - ankle pain: int
+  - bones are painful: int
+  - knee weakness: int
+  - elbow pain: int
+  - knee swelling: int
+  - skin moles: int
+  - knee lump or mass: int
+  - weight gain: int
+  - problems with movement: int
+  - knee stiffness or tightness: int
+  - leg swelling: int
+  - foot or toe swelling: int
+  - heartburn: int
+  - smoking problems: int
+  - muscle pain: int
+  - infant feeding problem: int
+  - recent weight loss: int
+  - problems with shape or size of breast: int
+  - underweight: int
+  - difficulty eating: int
+  - scanty menstrual flow: int
+  - vaginal pain: int
+  - vaginal redness: int
+  - vulvar irritation: int
+  - weakness: int
+  - decreased heart rate: int
+  - increased heart rate: int
+  - bleeding or discharge from nipple: int
+  - ringing in ear: int
+  - plugged feeling in ear: int
+  - itchy ear(s): int
+  - frontal headache: int
+  - fluid in ear: int
+  - neck stiffness or tightness: int
+  - spots or clouds in vision: int
+  - eye redness: int
+  - lacrimation: int
+  - itchiness of eye: int
+  - blindness: int
+  - eye burns or stings: int
+  - itchy eyelid: int
+  - feeling cold: int
+  - decreased appetite: int
+  - excessive appetite: int
+  - excessive anger: int
+  - loss of sensation: int
+  - focal weakness: int
+  - slurring words: int
+  - symptoms of the face: int
+  - disturbance of memory: int
+  - paresthesia: int
+  - side pain: int
+  - fever: int
+  - shoulder pain: int
+  - shoulder stiffness or tightness: int
+  - shoulder weakness: int
+  - arm cramps or spasms: int
+  - shoulder swelling: int
+  - tongue lesions: int
+  - leg cramps or spasms: int
+  - abnormal appearing tongue: int
+  - ache all over: int
+  - lower body pain: int
+  - problems during pregnancy: int
+  - spotting or bleeding during pregnancy: int
+  - cramps and spasms: int
+  - upper abdominal pain: int
+  - stomach bloating: int
+  - changes in stool appearance: int
+  - unusual color or odor to urine: int
+  - kidney mass: int
+  - swollen abdomen: int
+  - symptoms of prostate: int
+  - leg stiffness or tightness: int
+  - difficulty breathing: int
+  - rib pain: int
+  - joint pain: int
+  - muscle stiffness or tightness: int
+  - pallor: int
+  - hand or finger lump or mass: int
+  - chills: int
+  - groin pain: int
+  - fatigue: int
+  - abdominal distention: int
+  - regurgitation.1: int
+  - symptoms of the kidneys: int
+  - melena: int
+  - flushing: int
+  - coughing up sputum: int
+  - seizures: int
+  - delusions or hallucinations: int
+  - shoulder cramps or spasms: int
+  - joint stiffness or tightness: int
+  - pain or soreness of breast: int
+  - excessive urination at night: int
+  - bleeding from eye: int
+  - rectal bleeding: int
+  - constipation: int
+  - temper problems: int
+  - coryza: int
+  - wrist weakness: int
+  - eye strain: int
+  - hemoptysis: int
+  - lymphedema: int
+  - skin on leg or foot looks infected: int
+  - allergic reaction: int
+  - congestion in chest: int
+  - muscle swelling: int
+  - pus in urine: int
+  - abnormal size or shape of ear: int
+  - low back weakness: int
+  - sleepiness: int
+  - apnea: int
+  - abnormal breathing sounds: int
+  - excessive growth: int
+  - elbow cramps or spasms: int
+  - feeling hot and cold: int
+  - blood clots during menstrual periods: int
+  - absence of menstruation: int
+  - pulling at ears: int
+  - gum pain: int
+  - redness in ear: int
+  - fluid retention: int
+  - flu-like syndrome: int
+  - sinus congestion: int
+  - painful sinuses: int
+  - fears and phobias: int
+  - recent pregnancy: int
+  - uterine contractions: int
+  - burning chest pain: int
+  - back cramps or spasms: int
+  - stiffness all over: int
+  - muscle cramps co- ntractures or-  spasms: int
+  - low back cramps or spasms: int
+  - back mass or lump: int
+  - nosebleed: int
+  - long menstrual periods: int
+  - heavy menstrual flow: int
+  - unpredictable menstruation: int
+  - painful menstruation: int
+  - infertility: int
+  - frequent menstruation: int
+  - sweating: int
+  - mass on eyelid: int
+  - swollen eye: int
+  - eyelid swelling: int
+  - eyelid lesion or rash: int
+  - unwanted hair: int
+  - symptoms of bladder: int
+  - irregular appearing nails: int
+  - itching of skin: int
+  - hurts to breath: int
+  - nailbiting: int
+  - skin dryness pe- eling sc- aliness or-  roughness: int
+  - skin on arm or hand looks infected: int
+  - skin irritation: int
+  - itchy scalp: int
+  - hip swelling: int
+  - incontinence of stool: int
+  - foot or toe cramps or spasms: int
+  - warts: int
+  - bumps on penis: int
+  - too little hair: int
+  - foot or toe lump or mass: int
+  - skin rash: int
+  - mass or swelling around the anus: int
+  - low back swelling: int
+  - ankle swelling: int
+  - hip lump or mass: int
+  - drainage in throat: int
+  - dry or flaky scalp: int
+  - premenstrual tension or irritability: int
+  - feeling hot: int
+  - feet turned in: int
+  - foot or toe stiffness or tightness: int
+  - pelvic pressure: int
+  - elbow swelling: int
+  - elbow stiffness or tightness: int
+  - early or late onset of menopause: int
+  - mass on ear: int
+  - bleeding from ear: int
+  - hand or finger weakness: int
+  - low self-esteem: int
+  - throat irritation: int
+  - itching of the anus: int
+  - swollen or red tonsils: int
+  - irregular belly button: int
+  - swollen tongue: int
+  - lip sore: int
+  - vulvar sore: int
+  - hip stiffness or tightness: int
+  - mouth pain: int
+  - arm weakness: int
+  - leg lump or mass: int
+  - disturbance of smell or taste: int
+  - discharge in stools: int
+  - penis pain: int
+  - loss of sex drive: int
+  - obsessions and compulsions: int
+  - antisocial behavior: int
+  - neck cramps or spasms: int
+  - pupils unequal: int
+  - poor circulation: int
+  - thirst: int
+  - sleepwalking: int
+  - skin oiliness: int
+  - sneezing: int
+  - bladder mass: int
+  - knee cramps or spasms: int
+  - premature ejaculation: int
+  - leg weakness: int
+  - posture problems: int
+  - bleeding in mouth: int
+  - tongue bleeding: int
+  - change in skin mole size or color: int
+  - penis redness: int
+  - penile discharge: int
+  - shoulder lump or mass: int
+  - polyuria: int
+  - cloudy eye: int
+  - hysterical behavior: int
+  - arm lump or mass: int
+  - nightmares: int
+  - bleeding gums: int
+  - pain in gums: int
+  - bedwetting: int
+  - diaper rash: int
+  - lump or mass of breast: int
+  - vaginal bleeding after menopause: int
+  - infrequent menstruation: int
+  - mass on vulva: int
+  - jaw pain: int
+  - itching of scrotum: int
+  - postpartum problems of the breast: int
+  - eyelid retracted: int
+  - hesitancy: int
+  - elbow lump or mass: int
+  - muscle weakness: int
+  - throat redness: int
+  - joint swelling: int
+  - tongue pain: int
+  - redness in or around nose: int
+  - wrinkles on skin: int
+  - foot or toe weakness: int
+  - hand or finger cramps or spasms: int
+  - back stiffness or tightness: int
+  - wrist lump or mass: int
+  - skin pain: int
+  - low back stiffness or tightness: int
+  - low urine output: int
+  - skin on head or neck looks infected: int
+  - stuttering or stammering: int
+  - problems with orgasm: int
+  - nose deformity: int
+  - lump over jaw: int
+  - sore in nose: int
+  - hip weakness: int
+  - back swelling: int
+  - ankle stiffness or tightness: int
+  - ankle weakness: int
+  - neck weakness: int
+  - constipation: int
+  - red_spots_over_body: int
+  - spinning_movements: int
+  - scurring: int
+  - loss_of_balance: int
+  - family_history: int
+  - shivering: int
+  - back_pain: int
+  - internal_itching: int
+  - itching: int
+  - irregular_sugar_level: int
+  - patches_in_throat: int
+  - blackheads: int
+  - lethargy: int
+  - skin_rash: int
+  - stomach_pain: int
+  - nodal_skin_eruptions: int
+  - bruising: int
+  - receiving_unsterile_injections: int
+  - pain_during_bowel_movements: int
+  - blister: int
+  - visual_disturbances: int
+  - yellow_crust_ooze: int
+  - excessive_hunger: int
+  - pain_behind_the_eyes: int
+  - red_sore_around_nose: int
+  - weight_loss: int
+  - bloody_stool: int
+  - abnormal_menstruation: int
+  - pain_in_anal_region: int
+  - chills: int
+  - runny_nose: int
+  - fast_heart_rate: int
+  - drying_and_tingling_lips: int
+  - malaise: int
+  - throat_irritation: int
+  - vomiting: int
+  - abdominal_pain: int
+  - cough: int
+  - diarrhoea: int
+  - distention_of_abdomen: int
+  - slurred_speech: int
+  - stomach_bleeding: int
+  - lack_of_concentration: int
+  - hip_joint_pain: int
+  - loss_of_appetite: int
+  - mild_fever: int
+  - coma: int
+  - spotting_ urination: int
+  - joint_pain: int
+  - altered_sensorium: int
+  - enlarged_thyroid: int
+  - sweating: int
+  - restlessness: int
+  - dischromic _patches: int
+  - history_of_alcohol_consumption: int
+  - yellow_urine: int
+  - high_fever: int
+  - rusty_sputum: int
+  - extra_marital_contacts: int
+  - bladder_discomfort: int
+  - fluid_overload: int
+  - loss_of_smell: int
+  - weakness_in_limbs: int
+  - swelling_joints: int
+  - fatigue: int
+  - nausea: int
+  - palpitations: int
+  - sunken_eyes: int
+  - neck_pain: int
+  - acidity: int
+  - weight_gain: int
+  - mood_swings: int
+  - sinus_pressure: int
+  - blood_in_sputum: int
+  - muscle_pain: int
+  - continuous_sneezing: int
+  - dizziness: int
+  - movement_stiffness: int
+  - painful_walking: int
+  - brittle_nails: int
+  - muscle_wasting: int
+  - pus_filled_pimples: int
+  - belly_pain: int
+  - swelling_of_stomach: int
+  - unsteadiness: int
+  - breathlessness: int
+  - swollen_legs: int
+  - mucoid_sputum: int
+  - cold_hands_and_feets: int
+  - watering_from_eyes: int
+  - weakness_of_one_body_side: int
+  - yellowing_of_eyes: int
+  - ulcers_on_tongue: int
+  - silver_like_dusting: int
+  - foul_smell_of urine: int
+  - burning_micturition: int
+  - obesity: int
+  - receiving_blood_transfusion: int
+  - blurred_and_distorted_vision: int
+  - acute_liver_failure: int
+  - anxiety: int
+  - small_dents_in_nails: int
+  - muscle_weakness: int
+  - dehydration: int
+  - phlegm: int
+  - headache: int
+  - skin_peeling: int
+  - prominent_veins_on_calf: int
+  - depression: int
+  - yellowish_skin: int
+  - dark_urine: int
+  - continuous_feel_of_urine: int
+  - irritability: int
+  - puffy_face_and_eyes: int
+  - passage_of_gases: int
+  - cramps: int
+  - irritation_in_anus: int
+  - increased_appetite: int
+  - congestion: int
+  - swelled_lymph_nodes: int
+  - swollen_blood_vessels: int
+  - chest_pain: int
+  - polyuria: int
+  - stiff_neck: int
+  - swollen_extremeties: int
+  - knee_pain: int
+  - inflammatory_nails: int
+  - toxic_look_(typhos): int
+  - redness_of_eyes: int
+  - indigestion: int
