@@ -4,3 +4,4 @@ dataset_mongo/
 dataset_mongo/
 artifact/
 logs/
+.vscode/

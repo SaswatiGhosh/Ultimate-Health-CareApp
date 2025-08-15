@@ -12,9 +12,9 @@ from backend.pipeline.training_pipeline import TrainPipeline
 #     raise MyException(e,sys) from e
 
 
-
 # proj= Proj1Data()
 # proj.export_collection_as_DataFrame(bucket_name=MODEL_BUCKET_NAME, file_name=DATASET_FILE_NAME)
 
-t=TrainPipeline()
-t.start_data_ingestion()
+t = TrainPipeline()
+data_injestion_artifact = t.start_data_ingestion()
+t.start_data_validation(data_injestion_artifact)
