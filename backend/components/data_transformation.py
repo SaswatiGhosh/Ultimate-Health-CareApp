@@ -70,12 +70,7 @@ class DataTransformation:
             new_df = new_df.rename(columns=new_names)
         return new_df
     
-    def _drop_id_columns(self,new_df):
-        logging.info("Dropping 'id' columns")
-        drop_col= self._schema_config['drop_columns']
-        if drop_col in new_df.columns:
-            new_df=new_df.drop(drop_col, axis=1)
-        return new_df
+    
 
     def initiate_data_transformation(self)-> DataTransformationArtifact:
         try:
@@ -94,9 +89,6 @@ class DataTransformation:
             target_feature_test_df= test_df[TARGET_COLUMN]
             logging.info("Input and Target Cols defined for both train and test df")
 
-            input_feature_train_df=self._drop_id_columns(input_feature_train_df)
-
-            input_feature_test_df=self._drop_id_columns(input_feature_test_df)
 
             logging.info("Custom transformation applied to test and train data")
             logging.info("Starting data Transformation!!")
