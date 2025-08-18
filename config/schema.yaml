@@ -1,3 +1,4 @@
+drop_columns: Unnamed
 columns:
   - diseases: int
   - anxiety and nervousness: int

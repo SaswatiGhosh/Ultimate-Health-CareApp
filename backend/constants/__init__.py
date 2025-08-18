@@ -9,7 +9,7 @@ PIPELINE_NAME: str=""
 ARTIFACT_DIR: str="artifact"
 MODEL_FILE_NAME="model.pkl"
 
-TARGET_COLUMN= "Response"
+TARGET_COLUMN= "disease"
 CURRENT_YEAR=date.today().year
 PREPROCESSING_OBJECT_FILENAME="preprocessing.pkl"
 
@@ -39,3 +39,7 @@ DATASET_FILE_NAME="new_merged_dataset.csv"
 
 DATA_VALIDATION_DIR_NAME:str="data_validation"
 DATA_VALIDATION_REPORT_NAME:str="report.yaml"
+
+DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
+DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
+DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
