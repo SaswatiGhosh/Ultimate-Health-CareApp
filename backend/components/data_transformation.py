@@ -32,20 +32,21 @@ class DataTransformation:
         except Exception as e:
             raise MyException(e, sys) from e
 
-    def get_data_transformer_object(self) -> Pipeline:
+    def get_data_transformer_object(self,df_columns) -> Pipeline:
         logging.info("Entered get_data_transformed_object method of DataTransformation class")
         try:
             
             logging.info("Cols loaded from schema")
             preprocessor = SentenceTransformer('all-MiniLM-L6-v2')  # Fast & effective
-            column_embeddings = preprocessor.encode(TARGET_COLUMN, show_progress_bar=True)
+
+            column_embeddings = preprocessor.encode(df_columns, show_progress_bar=True)
 
             # Tune distance_threshold (try 1.0 to 1.5)
             clustering = AgglomerativeClustering(n_clusters=None, distance_threshold=0.5,metric='euclidean', linkage='ward')
             cluster_labels = clustering.fit_predict(column_embeddings)
 
             cluster_map = defaultdict(list)
-            for col, label in zip(TARGET_COLUMN, cluster_labels):
+            for col, label in zip(df_columns, cluster_labels):
                 cluster_map[label].append(col)
 
     
@@ -80,6 +81,8 @@ class DataTransformation:
             train_df=self.read_data(file_path=self.data_ingestion_artifact.trained_file_path)
             test_df=self.read_data(file_path=self.data_ingestion_artifact.test_file_path)
 
+            df_columns=list(train_df.columns)
+
             logging.info("Traina and test data loaded")
 
             input_feature_train_df= train_df.drop(columns=[TARGET_COLUMN],axis=1)
@@ -92,7 +95,7 @@ class DataTransformation:
 
             logging.info("Custom transformation applied to test and train data")
             logging.info("Starting data Transformation!!")
-            cluster_map= self.get_data_transformer_object()
+            cluster_map= self.get_data_transformer_object(df_columns)
             transformed_train_df = self._rename_columns(cluster_map, input_feature_train_df)
             transformed_test_df = self._rename_columns(cluster_map, input_feature_test_df)
             logging.info("Got the preprocessor object")
