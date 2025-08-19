@@ -17,4 +17,6 @@ from backend.pipeline.training_pipeline import TrainPipeline
 
 t = TrainPipeline()
 data_injestion_artifact = t.start_data_ingestion()
-t.start_data_validation(data_injestion_artifact)
+data_transformation_artifact=t.start_data_validation(data_injestion_artifact)
+data_transformation_artifact=t.start_data_transformation(data_injestion_artifact,data_transformation_artifact)
+
