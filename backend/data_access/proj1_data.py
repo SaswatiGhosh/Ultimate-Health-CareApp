@@ -31,6 +31,7 @@ class Proj1Data:
             data = io.BytesIO(response["Body"].read())
             df = pd.read_csv(data)
             df = df.drop("Unnamed: 0", axis=1)  # dropping the unnamed column
+            df.columns = df.columns.str.replace(" ", "")
             logging.info(f" Data fetched with len : {len(df)}")
             return df
         except MyException as e:
