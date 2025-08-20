@@ -5,8 +5,9 @@ from backend.logger import logging
 from backend.components.data_ingestion import DataIngestion
 from backend.components.data_validation import DataValidation
 from backend.components.data_transformation import DataTransformation
-from backend.entity.config_entity import DataIngestionConfig, DataValidationConfig,DataTransformationConfig
-from backend.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact,DataTransformationArtifact
+from backend.entity.config_entity import DataIngestionConfig, DataValidationConfig,DataTransformationConfig, ModelTrainerConfig
+from backend.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact,DataTransformationArtifact,ModelTrainerArtifact
+from backend.components.model_trainer import ModelTrainer
 
 
 class TrainPipeline:
@@ -14,6 +15,7 @@ class TrainPipeline:
         self.data_ingestion_config = DataIngestionConfig()
         self.data_validation_config = DataValidationConfig()
         self.data_transformation_config= DataTransformationConfig()
+        self.model_trainer_config= ModelTrainerConfig()
 
     def start_data_ingestion(self) -> DataIngestionArtifact:
         try:
@@ -59,3 +61,11 @@ class TrainPipeline:
             return data_transformation_artifact
         except Exception as e:
             raise MyException(e,sys) from e
+
+    def start_model_trainer(self, data_transformation_artifact : DataTransformation)->ModelTrainerArtifact:
+        try:
+            model_trainer = ModelTrainer(data_transformation_artifact=data_transformation_artifact, model_trainer_config=self.model_trainer_config)
+            model_trainer_artifact = model_trainer.initiate_model_trainer()
+            return model_trainer_artifact
+        except MyException as e:
+            raise MyException(e,sys)

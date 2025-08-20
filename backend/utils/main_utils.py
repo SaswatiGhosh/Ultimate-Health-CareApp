@@ -28,10 +28,10 @@ def save_csv_data(file_path: str, file_csv):
         raise MyException(e, sys) from e
 
 
-def load_numpy_array_data(file_path: str) -> np.array:
+def load_csv_data(file_path: str):
     try:
         with open(file_path, "rb") as file_obj:
-            return np.load(file_obj)
+            return np.loadtxt(file_obj,file_path)
     except Exception as e:
         raise MyException(sys, e)
 
@@ -46,3 +46,24 @@ def save_object(file_path: str, obj: object) -> None:
         logging.info("Exited the save object method of utils")
     except Exception as e:
         raise MyException(e, sys) from e
+
+def save_object(file_path:str, obj:object) ->None:
+    logging.info("Entered the save object method of utils")
+    try:
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, "wb") as file_obj:
+            dill.dump(obj, file_obj)
+    
+        logging.info("Exited the save object method of utils")
+    except Exception as e:
+        raise MyException(e,sys) from e
+    
+def load_object(file_path:str)-> object:
+    try:
+        with open(file_path,"rb") as file_obj:
+            obj=dill.load(file_obj)
+        return obj
+    except Exception as e:
+        raise MyException(e,sys) from e
+    
+

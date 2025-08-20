@@ -21,5 +21,6 @@ data_transformation_artifact = t.start_data_validation(data_injestion_artifact)
 data_transformation_artifact = t.start_data_transformation(
     data_injestion_artifact, data_transformation_artifact
 )
+model_trainer=t.start_model_trainer(data_transformation_artifact)
 
 logging.info(f"Completed the training pipeline")
