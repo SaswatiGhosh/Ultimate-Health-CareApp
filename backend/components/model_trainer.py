@@ -20,7 +20,15 @@ class ModelTrainer:
     def get_model_object_report(self,train,test):
         try:
             logging.info("Training RandomClassifier with specified paramters")
-            x_train,y_train,x_test,y_test=train[: , :-1], train[:,-1] , test[:,:-1], test[:,-1]
+            logging.info(train.shape,test.shape)
+            # x_train=train[: , :-1]
+            # y_train= train[:,-1]
+            # x_test=test[:,:-1]
+            # y_test=test[:,-1]
+            x_train = train.iloc[:, :-1].values
+            y_train = train.iloc[:, -1].values
+            x_test  = test.iloc[:, :-1].values
+            y_test  = test.iloc[:, -1].values
             logging.info("Train &Test split done")
             random_search={"n_estimators":self.model_trainer_config._n_estimators,
                 "max_depth":self.model_trainer_config._max_depth,
@@ -30,7 +38,7 @@ class ModelTrainer:
                 }
             clf=RandomForestClassifier(random_state=self.model_trainer_config._random_state,n_jobs=self.model_trainer_config._njobs)
             model=RandomizedSearchCV(clf, param_distributions=random_search, n_iter=30,cv=3,verbose=1, random_state=101,n_jobs=2,scoring='accuracy', pre_dispatch='2*n_jobs')
-            model.fit(x_train,y_train)
+            # model.fit(x_train,y_train)
             
             logging.info("Model Training going on..")
             model.fit(x_train,y_train)

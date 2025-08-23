@@ -126,7 +126,8 @@ class DataTransformation:
                 cluster_map, input_feature_test_df
             )
             logging.info("Renaming columns completed for train and test data")
-
+            transformed_train_df[TARGET_COLUMN]=target_feature_train_df
+            transformed_test_df[TARGET_COLUMN]=target_feature_test_df
             # logging.info("Initializing transformation fro training data")
             # input_feature_train_arr = cluster_map.fit_transform(transformed_train_df)
             # logging.info("Initializing transformation for testing data ")
@@ -144,6 +145,8 @@ class DataTransformation:
             #     self.data_transformation_config.transformed_object_file_path,
             #     cluster_map,
             # )
+
+            
             save_csv_data(
                 self.data_transformation_config.transformed_train_file_path,
                 file_csv=transformed_train_df,

@@ -22,16 +22,16 @@ def save_csv_data(file_path: str, file_csv):
     try:
         dir_path = os.path.dirname(file_path)
         os.makedirs(dir_path, exist_ok=True)
-        with open(file_path, "wb") as file_obj:
-            np.save(file_obj, file_csv)
+        file_csv.to_csv(file_path,index=False)
     except Exception as e:
         raise MyException(e, sys) from e
 
 
 def load_csv_data(file_path: str):
     try:
-        with open(file_path, "rb") as file_obj:
-            return np.loadtxt(file_obj,file_path)
+        logging.info(file_path)
+        x=pd.read_csv(file_path,encoding='utf-8')
+        return x
     except Exception as e:
         raise MyException(sys, e)
 
